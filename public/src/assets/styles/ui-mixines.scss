@@ -1,41 +1,63 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './views/home/home.component';
+// =============================================================================
+// VARIABLE
+// =============================================================================
+	$white: #ffffff;
+
+	$classic_red: rgb(225, 89, 68);
+	$classic_blue: rgb(95, 170, 239);
+	$classic_green: #3FB39D;
+
+	$med_yellow: #ffb54c;
+	$light_yellow: #ffd073;
+
+	$dark_blue: darken(#384667, 15%);
+	$med_blue: #384667;
+	$light_blue: lighten(#384667, 15%);
+
+	$dark_grey: #2b3554;
+	$med_grey: #29323c;
+	$light_grey: #485563;
+
 
 // =============================================================================
-// VIEWS
+// CONTAINTER SIZING
 // =============================================================================
+@mixin container_sizing( $max_size ){
+	width: 85%;
+	max-width: $max_size;
+	margin: 0 auto;
+}
 
 // =============================================================================
-// COMPONENTS
+// TYPO
 // =============================================================================
+@mixin header-1( $color ){}
+
+@mixin header-2( $color ){}
+
+@mixin body-1( $color ){}
+
+@mixin body-2( $color ){}
 
 // =============================================================================
-// DIRECTIVES
+// BUTTON
 // =============================================================================
+@mixin primary_button(){}
+
+@mixin secondary_button(){}
+
+@mixin link(){}
+
 
 // =============================================================================
-// PIPES
+// INPUT
 // =============================================================================
+@mixin input-text(){}
 
-// =============================================================================
-// EXTERNAL PACKAGE
-// =============================================================================
+@mixin input-select(){}
 
-@NgModule({
-	declarations: [
-		AppComponent,
-  HomeComponent
-	],
-	imports: [
-		BrowserModule,
-		AppRoutingModule
-	],
-	providers: [],
-	bootstrap: [
-		AppComponent
-	]
-})
-export class AppModule { }
+@mixin input-checkbox(){}
+
+@mixin input-radio(){}
+
+@mixin input-textarea(){}
